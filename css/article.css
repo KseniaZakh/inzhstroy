@@ -6,6 +6,10 @@ div.container > article h1 {
 	margin: 0 auto;
 }
 
+div.container > article {
+	padding-top: 160px;
+}
+
 div.container > article h1 {
 	text-transform: uppercase;
 }
