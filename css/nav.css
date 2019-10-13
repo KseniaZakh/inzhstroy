@@ -9,14 +9,17 @@ div.container > nav {
 		display: -webkit-box;
 		display: -webkit-flex;
 		display: -ms-flexbox;
-		font: normal 16px/37px "Regular", Arial, sans-serif;
+		list-style: none;
+		font: normal 16px/22px "Regular", Arial, sans-serif;
 		margin: 0;
 		padding: 0;
 }
 
 div.container > nav > a {
 	position: absolute;
-	font: normal 20px/37px "Regular", Arial, sans-serif;
+	font: normal 18px/24px "Regular", Arial, sans-serif;
+	color: rgba(0, 0, 0, 1);
+	transition: all 0.25s ease;
 }
 
 div.container > nav > a,
