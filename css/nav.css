@@ -19,7 +19,7 @@ div.container > nav {
 div.container > nav > a {
 	position: absolute;
 	font: normal 20px/37px "Regular", Arial, sans-serif;
-	/* border: 1px solid red; */
+	border: 1px solid red;
 }
 
 div.container > nav > a,
@@ -138,10 +138,18 @@ div.container > nav > ul > li > a > span {
 			width: 100%;
 		}
 
+		div.container > nav > ul > li > a {
+			padding: 5px 0 5px 20px;
+			}
+
 		div.container > nav > ul > li > a,
 		div.container > nav > a {
 			width: 100%;
-			padding: 5px 0 5px 40px;
+		}
+
+		div.container > nav > a {
+			top: calc(100vh - 149px);
+			padding-left: 40px;
 		}
 
 		div.container > nav > ul > li > a {
@@ -177,10 +185,18 @@ div.container > nav > ul > li > a > span {
 			width: 100%;
 		}
 
+	div.container > nav > ul > li > a {
+		padding: 5px 0 5px 20px;
+		}
+
 	div.container > nav > ul > li > a,
 	div.container > nav > a {
 		width: 100%;
-		padding: 5px 0 5px 30px;
+		}
+
+	div.container > nav > a {
+		top: calc(100vh - 139px);
+		padding-left: 30px;
 		}
 
 	div.container > nav > ul > li > a {
@@ -216,10 +232,18 @@ div.container > nav > ul > li > a > span {
 		width: 100%;
 		}
 
+	div.container > nav > ul > li > a {
+		padding: 5px 0 5px 20px;
+		}
+
 	div.container > nav > ul > li > a,
 	div.container > nav > a {
 		width: 100%;
-		padding: 5px 0 5px 20px;
+		}
+
+	div.container > nav > a {
+		top: calc(100vh - 129px);
+		padding-left: 20px;
 		}
 
 	div.container > nav > ul > li > a {
