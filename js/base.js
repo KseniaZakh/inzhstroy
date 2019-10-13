@@ -21,4 +21,22 @@ function resize() {
 
 $(document).ready(function() {
 	resize();
+
+	$('div.container > header > ul').on('click', function() {
+		if ($('div.container').hasClass('opened')) {
+			$('div.container').removeClass('opened');
+			}
+		else {
+			$('div.container').addClass('opened');
+			}
+		});
+
+		$('.move').on('click', function(e) {
+		if ($('div.container').hasClass('opened')) {
+			$('div.container').removeClass('opened');
+			}
+			e.preventDefault();
+		});
+
+		return false;
 });
