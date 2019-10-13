@@ -152,7 +152,8 @@ div.container > nav > ul > li > a > span {
 		}
 
 		div.container > nav > a {
-			top: calc(100vh - 149px);
+			/* top: calc(100vh - 149px); */
+			bottom: 0;
 			padding-left: 40px;
 		}
 
@@ -203,7 +204,8 @@ div.container > nav > ul > li > a > span {
 		}
 
 	div.container > nav > a {
-		top: calc(100vh - 139px);
+		/* top: calc(100vh - 139px); */
+		bottom: 0;
 		padding-left: 30px;
 		}
 
@@ -254,7 +256,8 @@ div.container > nav > ul > li > a > span {
 		}
 
 	div.container > nav > a {
-		top: calc(100vh - 129px);
+		/* top: calc(100vh - 129px); */
+		bottom: 0;
 		padding-left: 20px;
 		}
 
