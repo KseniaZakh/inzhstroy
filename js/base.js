@@ -8,6 +8,14 @@ function loadCSS(source, type) {
 		s.appendChild(sc);
 	}
 
+function loadJS(source, order) {
+	var s = document.getElementsByTagName('head')[0],
+		sc = document.createElement('script');
+		sc.acync = order;
+		sc.src = source;
+		s.appendChild(sc);
+	}
+
 function resize() {
 	if (window.innerWidth < 961) {
 		if (!vhCSS) {
