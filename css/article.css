@@ -6,16 +6,14 @@ div.container > article h1 {
 	margin: 0 auto;
 }
 
+
 div.container > article {
-	padding-top: 160px;
+	/* Убрать после верстки первого экрана */
+	padding-top: 100px;
 }
 
 div.container > article h1 {
 	text-transform: uppercase;
-}
-
-div.container > article > div.content > blockquote {
-	font: normal 22px/28px "Regular", Arial, sans-serif;
 }
 
 div.container > article h1,
@@ -59,6 +57,10 @@ div.container > article > div.content > ul  > li:before {
 		font: normal 70px/70px "Bold", Arial, sans-serif;
 		padding: 60px 0;
 		}
+
+	div.container > article > div.content > blockquote {
+		font: normal 22px/28px "Regular", Arial, sans-serif;
+		}
 	}
 
 @media (min-width : 961px) and (max-width : 1200px) {
@@ -68,6 +70,10 @@ div.container > article > div.content > ul  > li:before {
 	div.container > article h1 {
 		font: normal 64px/64px "Bold", Arial, sans-serif;
 		padding: 50px 0;
+		}
+
+	div.container > article > div.content > blockquote {
+		font: normal 22px/28px "Regular", Arial, sans-serif;
 		}
 	}
 
@@ -79,6 +85,10 @@ div.container > article > div.content > ul  > li:before {
 		font: normal 54px/54px "Bold", Arial, sans-serif;
 		padding: 40px 0;
 		}
+
+	div.container > article > div.content > blockquote {
+		font: normal 22px/28px "Regular", Arial, sans-serif;
+		}
 	}
 
 @media (min-width : 481px) and (max-width : 720px) {
@@ -89,6 +99,10 @@ div.container > article > div.content > ul  > li:before {
 		font: normal 48px/48px "Bold", Arial, sans-serif;
 		padding: 30px 0;
 		}
+
+		div.container > article > div.content > blockquote {
+			font: normal 22px/28px "Regular", Arial, sans-serif;
+			}
 	}
 
 @media (max-width : 480px) {
@@ -96,7 +110,11 @@ div.container > article > div.content > ul  > li:before {
 		padding: 10px 20px;
 		}
 	div.container > article h1 {
-		font: normal 40px/40px "Bold", Arial, sans-serif;
+		font: normal 36px/36px "Bold", Arial, sans-serif;
 		padding: 20px 0;
 		}
+
+	div.container > article > div.content > blockquote {
+		font: normal 22px/24px "Regular", Arial, sans-serif;
+			}
 	}

@@ -35,49 +35,48 @@ div.container > footer > div > a:first-of-type:hover:before {
 	width: 0;
 }
 
-
 div.container > footer > div > a:last-child {
-	width: 110px;
+	width: 150px;
+	height: 40px;
 	text-decoration: none;
+	background-image: url(../img/developer.svg);
+	background-position: 100% 50%;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
-div.container > footer > div > a:last-child:before {
-	content: "\e900";
-	width: 100%;
-	top: 0;
-	left: 0;
-	font: normal 40px/40px "icomoon";
+div.container > footer > div > a:last-child::after {
+	position: absolute;
+	display: block;
+	content: "разработка сайта";
+	top: calc(100% - 10px);
+	left: 40px;
+	font: normal 12px/12px "Regular", Arial, Tahoma, sans-serif;
+	white-space: nowrap;
 	color: rgba(0, 124, 162, 1);
-	border: none;
-	transition: all 0.3s ease;
+	transition: all 0.25s ease;
 }
 
-div.container > footer > div > a:last-child:hover:before {
+div.container > footer > div > a:last-child:hover::after {
 	color: rgba(0, 0, 0, 0.5);
 }
 
-
-	@media (min-width : 1201px) {
+@media (min-width : 1201px) {
 		div.container > footer > div {
 			padding: 60px;
-		}
-
-		div.container > footer > div > span {
-			left: 0;
-			top: 0;
-		}
-
-		div.container > footer > div > a:first-of-type,
-		div.container > footer > div > span {
-			padding: 10px 0;
-		}
-
-		div.container > footer > div > a:first-of-type:before {
-			top: 28px;
-		}
 	}
 
-	@media (min-width : 961px) and (max-width : 1200px) {
+	div.container > footer > div > a:first-of-type,
+	div.container > footer > div > span {
+		padding: 10px 0;
+	}
+
+	div.container > footer > div > a:first-of-type:before {
+		top: 28px;
+	}
+}
+
+@media (min-width : 961px) and (max-width : 1200px) {
 		div.container > footer > div {
 			padding: 50px;
 		}
@@ -92,7 +91,7 @@ div.container > footer > div > a:last-child:hover:before {
 		}
 	}
 
-	@media (min-width : 721px) and (max-width : 960px) {
+@media (min-width : 721px) and (max-width : 960px) {
 		div.container > footer > div {
 			padding: 40px;
 		}
@@ -107,7 +106,7 @@ div.container > footer > div > a:last-child:hover:before {
 		}
 	}
 
-	@media (min-width : 481px) and (max-width : 720px) {
+@media (min-width : 481px) and (max-width : 720px) {
 		div.container > footer > div {
 			padding: 30px;
 			flex-wrap: wrap;
@@ -117,15 +116,11 @@ div.container > footer > div > a:last-child:hover:before {
 
 		div.container > footer > div > span {
 			width: 51%;
+			line-height: 40px;
 		}
 
 		div.container > footer > div > a:first-of-type {
 			order: 1;
-		}
-
-		div.container > footer > div > a:first-of-type,
-		div.container > footer > div > span {
-			padding: 0 0 5px 0;
 		}
 
 		div.container > footer > div > a:first-of-type:before {
@@ -133,7 +128,7 @@ div.container > footer > div > a:last-child:hover:before {
 		}
 	}
 
-	@media (max-width : 480px) {
+@media (max-width : 480px) {
 		div.container > footer > div {
 			padding: 20px;
 			flex-wrap: wrap;
@@ -141,21 +136,12 @@ div.container > footer > div > a:last-child:hover:before {
 			-ms-flex-wrap: wrap;
 		}
 
-		div.container > footer > div > a,
+		div.container > footer > div > a:first-of-type,
 		div.container > footer > div > span {
 			width: 100%;
 		}
 
-		div.container > footer > div > a:first-of-type,
-		div.container > footer > div > span {
-			padding: 0 0 5px 0;
-		}
-
-		div.container > footer > div > a:first-of-type:before {
-			display: none;
-		}
-
-		div.container > footer > div > a:last-child {
-			height: 40px;
+	div.container > footer > div > a:first-of-type:before {
+		display: none;
 		}
 	}

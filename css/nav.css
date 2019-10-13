@@ -2,7 +2,7 @@
 
 div.container > nav {
 	position: fixed;
-	border: 1px solid blue;
+	border-bottom: 1px solid blue;
 	}
 
 	div.container > nav > ul {
@@ -13,13 +13,46 @@ div.container > nav {
 		font: normal 16px/37px "Regular", Arial, sans-serif;
 		margin: 0;
 		padding: 0;
-		border: 1px solid black;
+		/* border: 1px solid black; */
 	}
 
 div.container > nav > a {
 	position: absolute;
 	font: normal 20px/37px "Regular", Arial, sans-serif;
-	border: 1px solid red;
+	/* border: 1px solid red; */
+}
+
+div.container > nav > a,
+div.container > nav > ul > li > a {
+	display: block;
+	color : rgba(0, 0, 0, 1);
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+div.container > nav > ul > li > a {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+div.container > nav > ul > li > a::before {
+	position: absolute;
+	display: none;
+	content: "";
+	width: 100%;
+	height: 3px;
+	background-color: rgba(0, 124, 162, 1);
+	z-index: 10;
+}
+
+div.container > nav > a:hover,
+div.container > nav > ul > li > a:hover {
+	color : rgba(0, 124, 162, 1);
+}
+
+div.container > nav > ul > li > a > span {
+	display: block;
 }
 
 
@@ -27,7 +60,7 @@ div.container > nav > a {
 	div.container > nav {
 		width: calc(100% - 410px);
 		top: 0;
-		right: 120px;
+		right: 140px;
 		padding-top: 40px;
 		z-index: 30;
 	}
@@ -37,26 +70,165 @@ div.container > nav > a {
 		top: 40px;
 	}
 
-	div.container > nav > ul > li {
-		padding: 0 25px;
+	div.container > nav > ul {
+		width: calc(100% - 210px);
+		max-width: 480px;
+		justify-content: space-between;
+		-webkit-justify-content: space-between;
+		-ms-justify-content: space-between;
 	}
+
+	div.container > nav > ul > li > a:hover::before {
+		display: block;
+		width: 100%;
+		top: -40px;
+		left: 0;
+		}
 	}
 
 @media (min-width : 961px) and (max-width : 1200px) {
 	div.container > nav {
+		width: calc(100% - 410px);
 		top: 0;
-		right: 110px;
-	}
+		right: 130px;
+		padding-top: 40px;
+		z-index: 30;
+		}
+
+	div.container > nav > ul {
+		width: calc(100% - 210px);
+		max-width: 480px;
+		justify-content: space-between;
+		-webkit-justify-content: space-between;
+		-ms-justify-content: space-between;
+		}
+
+	div.container > nav > a {
+		right: 0;
+		top: 40px;
+		}
+
+	div.container > nav > ul > li > a:hover::before {
+		display: block;
+		width: 100%;
+		top: -40px;
+		left: 0;
+		}
 	}
 
 @media (min-width : 721px) and (max-width : 960px) {
+	div.container > nav {
+		/* display: none; */
+		width: 100%;
+		height: calc(100vh - 100px);
+		top: 100px;
+		left: 0;
+		background-color: rgba(255, 255, 255, 1);
+		z-index: 40;
+		}
 
+		div.container > nav > ul {
+			width: 100%;
+			flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+		}
+
+		div.container > nav > ul > li {
+			width: 100%;
+		}
+
+		div.container > nav > ul > li > a,
+		div.container > nav > a {
+			width: 100%;
+			padding: 5px 0 5px 40px;
+		}
+
+		div.container > nav > ul > li > a {
+			width: 100%;
+			height: 100%;
+			}
+
+		div.container > nav > ul > li > a:hover,
+		div.container > nav > a:hover {
+			background-color: rgba(245, 245, 245, 1);
+		}
 	}
 
 @media (min-width : 481px) and (max-width : 720px) {
+	div.container > nav {
+		/* display: none; */
+		width: 100%;
+		height: calc(100vh - 90px);
+		top: 90px;
+		left: 0;
+		background-color: rgba(255, 255, 255, 1);
+		z-index: 40;
+		}
 
+	div.container > nav > ul {
+		width: 100%;
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		}
+
+		div.container > nav > ul > li {
+			width: 100%;
+		}
+
+	div.container > nav > ul > li > a,
+	div.container > nav > a {
+		width: 100%;
+		padding: 5px 0 5px 30px;
+		}
+
+	div.container > nav > ul > li > a {
+		width: 100%;
+		height: 100%;
+		}
+
+	div.container > nav > ul > li > a:hover,
+	div.container > nav > a:hover {
+		background-color: rgba(245, 245, 245, 1);
+		}
 	}
 
 @media (max-width : 480px) {
+	div.container > nav {
+		/* display: none; */
+		width: 100%;
+		height: calc(100vh - 80px);
+		top: 80px;
+		left: 0;
+		background-color: rgba(255, 255, 255, 1);
+		z-index: 40;
+		}
 
+	div.container > nav > ul {
+		width: 100%;
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		}
+
+	div.container > nav > ul > li {
+		width: 100%;
+		}
+
+	div.container > nav > ul > li > a,
+	div.container > nav > a {
+		width: 100%;
+		padding: 5px 0 5px 20px;
+		}
+
+	div.container > nav > ul > li > a {
+		width: 100%;
+		height: 100%;
+		}
+
+		div.container > nav > ul > li > a:hover,
+		div.container > nav > a:hover {
+			background-color: rgba(245, 245, 245, 1);
+		}
 	}

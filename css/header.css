@@ -1,15 +1,17 @@
 @charset "UTF-8";
 
-div.container > header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 30;
-	/* цвет фона уточнить! Транзишн - ! */
-	background-color: rgba(255, 255, 255, 1);
-	transition: height 0.25s ease;
-	border-bottom: 1px solid rgba(233, 233, 233, 1);
+	div.container > header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 30;
+		background-color: rgba(255, 255, 255, 1);
+		box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+	}
+
+	div.container.opened > header {
+		box-shadow: none;
 	}
 
 	div.container > header > a.logo,
@@ -21,26 +23,25 @@ div.container > header {
 			position: absolute;
 			top: 0;
 			left: 0;
-			height : inherit;
+			height: inherit;
 			z-index: 20;
 			transition: all 0.25s ease;
 		}
 
 		div.container > header > a.logo > span {
-			width : 100%;
-			height : 100%;
-			background-image : url("../img/logo.svg?111020190955");
-			background-position : 0% 50%;
-			background-repeat : no-repeat;
-			background-size : contain;
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background-image: url("../img/logo.svg?111020190955");
+			background-position: 0% 50%;
+			background-repeat: no-repeat;
+			background-size: contain;
+
 		}
 
 		div.container > header > a.lang {
 			display: block;
 			position:absolute;
-			width: 45px;
-			height: 40px;
-			font: normal 20px/37px "Regular", Arial, sans-serif;
 			text-transform: uppercase;
 			text-align: center;
 			color: rgba(0, 124, 162, 1);
@@ -52,15 +53,78 @@ div.container > header {
 		div.container > header > a.lang:hover {
 			border: 1px solid rgba(0, 0, 0, 0.5);
 			color: rgba(255, 255, 255, 1);
-			background-color: rgba(0, 124, 162,0.5);
+			background-color: rgba(0, 124, 162, 0.5);
 		}
+
+	div.container > header > ul {
+		position: absolute;
+		top : calc(50% - 14px);
+		z-index: 40;
+		width: 28px;
+		height: 28px;
+		margin : 0;
+		padding : 0;
+		cursor : pointer;
+		overflow : hidden;
+		}
+
+	div.container > header > ul > li {
+		display: inherit;
+		position: inherit;
+		left: 0;
+		z-index: inherit;
+		width: 100%;
+		height: 2px;
+		background-color: rgba(0, 0, 0, 1);
+		transition: all 0.25s ease;
+		}
+
+	div.container > header > ul > li:first-child,
+	div.container > header > ul > li:nth-child(2) {
+		width: 66.6666%;
+		top: calc(50% - 1px);
+		transform: rotate(0);
+		}
+
+	div.container > header > ul > li:nth-child(3) {
+		width: 33.3333%;
+		top: 0;
+		}
+
+	div.container > header > ul > li:last-child {
+		  bottom: 0;
+	  }
+
+	div.container > header > ul:hover > li:first-child,
+	div.container > header > ul:hover > li:nth-child(2),
+	div.container > header > ul:hover > li:nth-child(3),
+	div.container > header > ul > li:last-child,
+	div.container.opened > header > ul > li {
+		width: 100%;
+	}
+
+	div.container.opened > header > ul > li:first-child {
+		transform: rotate(45deg);
+	}
+
+	div.container.opened > header > ul > li:nth-child(2) {
+		transform: rotate(-45deg);
+	}
+
+	div.container.opened > header > ul > li:nth-child(3) {
+		top: -2px;
+	}
+
+	div.container.opened > header > ul > li:last-child {
+		bottom: -2px;
+	}
 
 @media (min-width : 1201px) {
 
 	div.container > header {
 		height: 120px;
 	}
-	div.container > header > ul.mob_menu {
+	div.container > header > ul {
 		display: none;
 	}
 
@@ -70,14 +134,17 @@ div.container > header {
 		}
 
 		div.container > header > a.lang {
-			top: 40px;
+			width: 45px;
+			height: 40px;
+			font: normal 20px/38px "Regular", Arial, sans-serif;
+			top: calc(50% - 20px);
 			right: 60px;
 		}
 
 	}
 
 @media (min-width : 961px) and (max-width : 1200px) {
-	div.container > header > ul.mob_menu {
+	div.container > header > ul {
 		display: none;
 	}
 
@@ -91,7 +158,10 @@ div.container > header {
 		}
 
 		div.container > header > a.lang {
-			top: 35px;
+			width: 45px;
+			height: 40px;
+			font: normal 20px/38px "Regular", Arial, sans-serif;
+			top: calc(50% - 20px);
 			right: 50px;
 		}
 
@@ -108,8 +178,15 @@ div.container > header {
 		}
 
 		div.container > header > a.lang {
-			top: 30px;
+			width: 45px;
+			height: 40px;
+			font: normal 20px/38px "Regular", Arial, sans-serif;
+			top: calc(50% - 20px);
 			right: 90px;
+		}
+
+		div.container > header > ul {
+    	right: 40px;
 		}
 	}
 
@@ -124,8 +201,15 @@ div.container > header {
 		}
 
 		div.container > header > a.lang {
-			top: 25px;
+			width: 40px;
+			height: 36px;
+			font: normal 20px/34px "Regular", Arial, sans-serif;
+			top: calc(50% - 18px);
 			right: 80px;
+		}
+
+		div.container > header > ul {
+    	right: 30px;
 		}
 	}
 
@@ -140,7 +224,14 @@ div.container > header {
 		}
 
 		div.container > header > a.lang {
-			top: 20px;
+			width: 40px;
+			height: 36px;
+			font: normal 20px/34px "Regular", Arial, sans-serif;
+			top: calc(50% - 18px);
 			right: 75px;
+		}
+
+		div.container > header > ul {
+    	right: 20px;
 		}
 	}
