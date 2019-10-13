@@ -13,13 +13,11 @@ div.container > nav {
 		font: normal 16px/37px "Regular", Arial, sans-serif;
 		margin: 0;
 		padding: 0;
-		/* border: 1px solid black; */
-	}
+}
 
 div.container > nav > a {
 	position: absolute;
 	font: normal 20px/37px "Regular", Arial, sans-serif;
-	border: 1px solid red;
 }
 
 div.container > nav > a,
@@ -152,8 +150,7 @@ div.container > nav > ul > li > a > span {
 		}
 
 		div.container > nav > a {
-			top: calc(100vh - 149px);
-			/* bottom: 0; */
+			bottom: 10px;
 			padding-left: 40px;
 		}
 
@@ -204,8 +201,7 @@ div.container > nav > ul > li > a > span {
 		}
 
 	div.container > nav > a {
-		top: calc(100vh - 139px);
-		/* bottom: 0; */
+		bottom: 10px;
 		padding-left: 30px;
 		}
 
@@ -256,8 +252,7 @@ div.container > nav > ul > li > a > span {
 		}
 
 	div.container > nav > a {
-		top: calc(100vh - 129px);
-		/* bottom: 0; */
+		bottom: 10px;
 		padding-left: 20px;
 		}
 
