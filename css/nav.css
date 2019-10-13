@@ -2,7 +2,6 @@
 
 div.container > nav {
 	position: fixed;
-	border-bottom: 1px solid blue;
 	}
 
 	div.container > nav > ul {
