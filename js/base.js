@@ -33,9 +33,11 @@ $(document).ready(function() {
 	$('div.container > header > ul').on('click', function() {
 		if ($('div.container').hasClass('opened')) {
 			$('div.container').removeClass('opened');
+			$('div.scrollbar-menu').scrollbar('destroy');
 			}
 		else {
 			$('div.container').addClass('opened');
+			$('div.scrollbar-menu').scrollbar();
 			}
 		});
 
