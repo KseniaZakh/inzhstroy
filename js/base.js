@@ -25,6 +25,11 @@ function resize() {
 		let vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
 	}
+
+	if ($('div.container > nav > div ul').length!==0 && $('div.container').hasClass('opened')) {
+		$('div.container').removeClass('opened');
+		$('div.scrollbar-menu').scrollbar('destroy');
+		}
 }
 
 $(document).ready(function() {
